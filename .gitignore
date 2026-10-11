@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Environment variables — JANGAN PERNAH COMMIT
+.env
+*.env
+
+# Data & output
+data/
+output/
+*.pdf
+*.json.bak
+
+# Langflow
+*.db
+langflow.db
+
+# Editor
+.vscode/
+.idea/
+*.suo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# UI build artifacts
+ui/node_modules/
+ui/dist/
+ui/dist-ssr/

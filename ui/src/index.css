@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif; background: #0f172a; color: #e2e8f0; }
+  @media print { body { background: #fff; color: #000; } }
+}

@@ -1,0 +1,1923 @@
+{
+  "data": {
+    "edges": [
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ChatInput",
+            "id": "ChatInput-doc",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "document_text",
+            "id": "PDPClauseExtractor-node",
+            "inputTypes": [
+              "Message",
+              "str"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__ChatInput-doc{œdataTypeœ:œChatInputœ,œidœ:œChatInput-docœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-PDPClauseExtractor-node{œfieldNameœ:œdocument_textœ,œidœ:œPDPClauseExtractor-nodeœ,œinputTypesœ:[œMessageœ,œstrœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "ChatInput-doc",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-docœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "PDPClauseExtractor-node",
+        "targetHandle": "{œfieldNameœ:œdocument_textœ,œidœ:œPDPClauseExtractor-nodeœ,œinputTypesœ:[œMessageœ,œstrœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "LanguageModelComponent",
+            "id": "LanguageModelComponent-gemini",
+            "name": "model_output",
+            "output_types": [
+              "LanguageModel"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "llm",
+            "id": "PDPClauseExtractor-node",
+            "inputTypes": [
+              "LanguageModel"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__LanguageModelComponent-gemini{œdataTypeœ:œLanguageModelComponentœ,œidœ:œLanguageModelComponent-geminiœ,œnameœ:œmodel_outputœ,œoutput_typesœ:[œLanguageModelœ]}-PDPClauseExtractor-node{œfieldNameœ:œllmœ,œidœ:œPDPClauseExtractor-nodeœ,œinputTypesœ:[œLanguageModelœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "LanguageModelComponent-gemini",
+        "sourceHandle": "{œdataTypeœ:œLanguageModelComponentœ,œidœ:œLanguageModelComponent-geminiœ,œnameœ:œmodel_outputœ,œoutput_typesœ:[œLanguageModelœ]}",
+        "target": "PDPClauseExtractor-node",
+        "targetHandle": "{œfieldNameœ:œllmœ,œidœ:œPDPClauseExtractor-nodeœ,œinputTypesœ:[œLanguageModelœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "PDPClauseExtractorComponent",
+            "id": "PDPClauseExtractor-node",
+            "name": "extracted_data",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "extracted_data",
+            "id": "PDPLegalRetriever-node",
+            "inputTypes": [
+              "Data"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__PDPClauseExtractor-node{œdataTypeœ:œPDPClauseExtractorComponentœ,œidœ:œPDPClauseExtractor-nodeœ,œnameœ:œextracted_dataœ,œoutput_typesœ:[œDataœ]}-PDPLegalRetriever-node{œfieldNameœ:œextracted_dataœ,œidœ:œPDPLegalRetriever-nodeœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "PDPClauseExtractor-node",
+        "sourceHandle": "{œdataTypeœ:œPDPClauseExtractorComponentœ,œidœ:œPDPClauseExtractor-nodeœ,œnameœ:œextracted_dataœ,œoutput_typesœ:[œDataœ]}",
+        "target": "PDPLegalRetriever-node",
+        "targetHandle": "{œfieldNameœ:œextracted_dataœ,œidœ:œPDPLegalRetriever-nodeœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "PDPLegalRetrieverComponent",
+            "id": "PDPLegalRetriever-node",
+            "name": "retrieved_context",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "retrieved_data",
+            "id": "PDPComplianceChecker-node",
+            "inputTypes": [
+              "Data"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__PDPLegalRetriever-node{œdataTypeœ:œPDPLegalRetrieverComponentœ,œidœ:œPDPLegalRetriever-nodeœ,œnameœ:œretrieved_contextœ,œoutput_typesœ:[œDataœ]}-PDPComplianceChecker-node{œfieldNameœ:œretrieved_dataœ,œidœ:œPDPComplianceChecker-nodeœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "PDPLegalRetriever-node",
+        "sourceHandle": "{œdataTypeœ:œPDPLegalRetrieverComponentœ,œidœ:œPDPLegalRetriever-nodeœ,œnameœ:œretrieved_contextœ,œoutput_typesœ:[œDataœ]}",
+        "target": "PDPComplianceChecker-node",
+        "targetHandle": "{œfieldNameœ:œretrieved_dataœ,œidœ:œPDPComplianceChecker-nodeœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "LanguageModelComponent",
+            "id": "LanguageModelComponent-gemini",
+            "name": "model_output",
+            "output_types": [
+              "LanguageModel"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "llm",
+            "id": "PDPComplianceChecker-node",
+            "inputTypes": [
+              "LanguageModel"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__LanguageModelComponent-gemini{œdataTypeœ:œLanguageModelComponentœ,œidœ:œLanguageModelComponent-geminiœ,œnameœ:œmodel_outputœ,œoutput_typesœ:[œLanguageModelœ]}-PDPComplianceChecker-node{œfieldNameœ:œllmœ,œidœ:œPDPComplianceChecker-nodeœ,œinputTypesœ:[œLanguageModelœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "LanguageModelComponent-gemini",
+        "sourceHandle": "{œdataTypeœ:œLanguageModelComponentœ,œidœ:œLanguageModelComponent-geminiœ,œnameœ:œmodel_outputœ,œoutput_typesœ:[œLanguageModelœ]}",
+        "target": "PDPComplianceChecker-node",
+        "targetHandle": "{œfieldNameœ:œllmœ,œidœ:œPDPComplianceChecker-nodeœ,œinputTypesœ:[œLanguageModelœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "PDPComplianceCheckerComponent",
+            "id": "PDPComplianceChecker-node",
+            "name": "compliance_results",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "compliance_data",
+            "id": "PDPAuditReporter-node",
+            "inputTypes": [
+              "Data"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__PDPComplianceChecker-node{œdataTypeœ:œPDPComplianceCheckerComponentœ,œidœ:œPDPComplianceChecker-nodeœ,œnameœ:œcompliance_resultsœ,œoutput_typesœ:[œDataœ]}-PDPAuditReporter-node{œfieldNameœ:œcompliance_dataœ,œidœ:œPDPAuditReporter-nodeœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "PDPComplianceChecker-node",
+        "sourceHandle": "{œdataTypeœ:œPDPComplianceCheckerComponentœ,œidœ:œPDPComplianceChecker-nodeœ,œnameœ:œcompliance_resultsœ,œoutput_typesœ:[œDataœ]}",
+        "target": "PDPAuditReporter-node",
+        "targetHandle": "{œfieldNameœ:œcompliance_dataœ,œidœ:œPDPAuditReporter-nodeœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "PDPAuditReporterComponent",
+            "id": "PDPAuditReporter-node",
+            "name": "report_markdown",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "ChatOutput-report",
+            "inputTypes": [
+              "Data",
+              "JSON",
+              "DataFrame",
+              "Table",
+              "Message"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__PDPAuditReporter-node{œdataTypeœ:œPDPAuditReporterComponentœ,œidœ:œPDPAuditReporter-nodeœ,œnameœ:œreport_markdownœ,œoutput_typesœ:[œMessageœ]}-ChatOutput-report{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-reportœ,œinputTypesœ:[œDataœ,œJSONœ,œDataFrameœ,œTableœ,œMessageœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "PDPAuditReporter-node",
+        "sourceHandle": "{œdataTypeœ:œPDPAuditReporterComponentœ,œidœ:œPDPAuditReporter-nodeœ,œnameœ:œreport_markdownœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "ChatOutput-report",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-reportœ,œinputTypesœ:[œDataœ,œJSONœ,œDataFrameœ,œTableœ,œMessageœ],œtypeœ:œotherœ}"
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "id": "ChatInput-doc",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Get chat inputs from the Playground.",
+            "display_name": "Chat Input",
+            "documentation": "https://docs.langflow.org/chat-input-and-output",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "should_store_message",
+              "sender",
+              "sender_name",
+              "session_id",
+              "context_id",
+              "files"
+            ],
+            "frozen": false,
+            "icon": "MessagesSquare",
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "metadata": {
+              "code_hash": "7a26c54d89ed",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "lfx",
+                    "version": null
+                  }
+                ],
+                "total_dependencies": 1
+              },
+              "module": "lfx.components.input_output.chat.ChatInput"
+            },
+            "minimized": true,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Chat Message",
+                "group_outputs": false,
+                "method": "message_response",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from lfx.base.data.utils import IMG_FILE_TYPES, TEXT_FILE_TYPES\nfrom lfx.base.io.chat import ChatComponent\nfrom lfx.inputs.inputs import BoolInput\nfrom lfx.io import (\n    DropdownInput,\n    FileInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n)\nfrom lfx.schema.message import Message\nfrom lfx.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_USER,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatInput(ChatComponent):\n    display_name = \"Chat Input\"\n    description = \"Get chat inputs from the Playground.\"\n    documentation: str = \"https://docs.langflow.org/chat-input-and-output\"\n    icon = \"MessagesSquare\"\n    name = \"ChatInput\"\n    minimized = True\n\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"Input Text\",\n            value=\"\",\n            info=\"Message to be passed as input.\",\n            input_types=[],\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_USER,\n            info=\"Type of sender.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_USER,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"context_id\",\n            display_name=\"Context ID\",\n            info=\"The context ID of the chat. Adds an extra layer to the local memory.\",\n            value=\"\",\n            advanced=True,\n        ),\n        FileInput(\n            name=\"files\",\n            display_name=\"Files\",\n            file_types=TEXT_FILE_TYPES + IMG_FILE_TYPES,\n            info=\"Files to be sent with the message.\",\n            advanced=True,\n            is_list=True,\n            temp_file=True,\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Chat Message\", name=\"message\", method=\"message_response\"),\n    ]\n\n    async def message_response(self) -> Message:\n        files = self.files if self.files else []\n        if files and not isinstance(files, list):\n            files = [files]\n        files = [f for f in files if f is not None and f != \"\"]\n\n        session_id = self.session_id or self.graph.session_id or \"\"\n        message = await Message.create(\n            text=self.input_value,\n            sender=self.sender,\n            sender_name=self.sender_name,\n            session_id=session_id,\n            context_id=self.context_id,\n            files=files,\n        )\n        if session_id and isinstance(message, Message) and self.should_store_message:\n            stored_message = await self.send_message(\n                message,\n            )\n            self.message.value = stored_message\n            message = stored_message\n\n        self.status = message\n        return message\n"
+              },
+              "context_id": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Context ID",
+                "dynamic": false,
+                "info": "The context ID of the chat. Adds an extra layer to the local memory.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "name": "context_id",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "files": {
+                "_input_type": "FileInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Files",
+                "dynamic": false,
+                "fileTypes": [
+                  "csv",
+                  "json",
+                  "pdf",
+                  "txt",
+                  "md",
+                  "mdx",
+                  "yaml",
+                  "yml",
+                  "xml",
+                  "html",
+                  "htm",
+                  "docx",
+                  "py",
+                  "sh",
+                  "sql",
+                  "js",
+                  "ts",
+                  "tsx",
+                  "jpg",
+                  "jpeg",
+                  "png",
+                  "bmp",
+                  "image"
+                ],
+                "file_path": "",
+                "info": "Files to be sent with the message.",
+                "list": true,
+                "name": "files",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "temp_file": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "file",
+                "value": ""
+              },
+              "input_value": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "ai_enabled": false,
+                "api_editable": false,
+                "copy_field": false,
+                "display_name": "Input Text",
+                "dynamic": false,
+                "info": "Message to be passed as input.",
+                "input_types": [],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "input_value",
+                "override_skip": false,
+                "password": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "KEBIJAKAN PRIVASI\nPT Contoh Digital Indonesia\nBerlaku sejak: 1 Januari 2024\n\n1. PENDAHULUAN\nPT Contoh Digital Indonesia (\"Kami\") berkomitmen untuk melindungi privasi pengguna layanan kami.\n\n2. DASAR PEMROSESAN DATA\nKami memproses Data Pribadi Anda berdasarkan:\na. Persetujuan eksplisit yang Anda berikan saat mendaftar akun;\nb. Pemenuhan kewajiban kontraktual dalam penyediaan layanan;\nc. Kewajiban hukum yang berlaku bagi Kami sebagai pengendali data.\n\n3. HAK-HAK PENGGUNA\nSebagai Subjek Data Pribadi, Anda memiliki hak untuk:\na. Mengakses dan memperoleh salinan Data Pribadi yang kami proses;\nb. Memperbarui atau memperbaiki ketidakakuratan Data Pribadi;\nc. Menarik kembali persetujuan pemrosesan Data Pribadi;\nd. Mengajukan penghapusan Data Pribadi;\ne. Mendapatkan informasi tentang tujuan pemrosesan data;\nf. Mengajukan keberatan atas pemrosesan otomatis.\n\n4. PENGAMANAN DATA\nKami menerapkan langkah-langkah teknis dan operasional untuk melindungi Data Pribadi, termasuk enkripsi data saat transit dan saat penyimpanan (at-rest) serta kontrol akses.\n\n5. INSIDEN KEAMANAN DATA\nDalam hal terjadi insiden keamanan yang mengakibatkan kebocoran Data Pribadi, kami akan memberitahukan kepada pengguna yang terdampak dalam waktu yang wajar.\n\n6. PENYIMPANAN DAN PENGHAPUSAN DATA\nData Pribadi Anda akan disimpan selama diperlukan untuk tujuan pemrosesan yang telah diberitahukan. Setelah tujuan tersebut terpenuhi, kami akan menghapus Data Pribadi Anda sesuai prosedur internal kami."
+              },
+              "sender": {
+                "_input_type": "DropdownInput",
+                "advanced": true,
+                "api_editable": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Sender Type",
+                "dynamic": false,
+                "external_options": {},
+                "info": "Type of sender.",
+                "name": "sender",
+                "options": [
+                  "Machine",
+                  "User"
+                ],
+                "options_metadata": [],
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "str",
+                "value": "User"
+              },
+              "sender_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Sender Name",
+                "dynamic": false,
+                "info": "Name of the sender.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "name": "sender_name",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "User"
+              },
+              "session_id": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Session ID",
+                "dynamic": false,
+                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "name": "session_id",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "should_store_message": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Store Messages",
+                "dynamic": false,
+                "info": "Store the message in the history.",
+                "list": false,
+                "name": "should_store_message",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "bool",
+                "value": true
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "message",
+          "showNode": false,
+          "type": "ChatInput"
+        },
+        "dragging": false,
+        "id": "ChatInput-doc",
+        "measured": {
+          "height": 52,
+          "width": 192
+        },
+        "position": {
+          "x": -450,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "LanguageModelComponent-gemini",
+          "node": {
+            "base_classes": [
+              "LanguageModel",
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Runs a language model given a specified provider.",
+            "display_name": "Language Model",
+            "documentation": "https://docs.langflow.org/components-models",
+            "edited": false,
+            "field_order": [
+              "model",
+              "model_name",
+              "provider",
+              "api_key",
+              "base_url_ibm_watsonx",
+              "project_id",
+              "ollama_base_url",
+              "input_value",
+              "system_message",
+              "stream",
+              "temperature",
+              "max_tokens"
+            ],
+            "frozen": false,
+            "icon": "brain-circuit",
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "metadata": {
+              "code_hash": "4942994b24a6",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "lfx",
+                    "version": null
+                  }
+                ],
+                "total_dependencies": 1
+              },
+              "keywords": [
+                "model",
+                "llm",
+                "language model",
+                "large language model"
+              ],
+              "module": "lfx.components.models_and_agents.language_model.LanguageModelComponent"
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Model Response",
+                "group_outputs": false,
+                "hidden": null,
+                "loop_types": null,
+                "method": "text_response",
+                "name": "text_output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Language Model",
+                "group_outputs": false,
+                "hidden": null,
+                "loop_types": null,
+                "method": "build_model",
+                "name": "model_output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "LanguageModel",
+                "tool_mode": true,
+                "types": [
+                  "LanguageModel"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "API Key",
+                "dynamic": false,
+                "info": "Overrides global provider settings. Leave blank to use your pre-configured API Key.",
+                "input_types": [],
+                "load_from_db": true,
+                "name": "api_key",
+                "override_skip": false,
+                "password": true,
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "base_url_ibm_watsonx": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "api_editable": false,
+                "combobox": true,
+                "dialog_inputs": {},
+                "display_name": "watsonx API Endpoint",
+                "dynamic": false,
+                "external_options": {},
+                "info": "The base URL of the API (IBM watsonx.ai only)",
+                "name": "base_url_ibm_watsonx",
+                "options": [
+                  "https://us-south.ml.cloud.ibm.com",
+                  "https://eu-de.ml.cloud.ibm.com",
+                  "https://eu-gb.ml.cloud.ibm.com",
+                  "https://au-syd.ml.cloud.ibm.com",
+                  "https://jp-tok.ml.cloud.ibm.com",
+                  "https://ca-tor.ml.cloud.ibm.com"
+                ],
+                "options_metadata": [],
+                "override_skip": false,
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": false,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "str",
+                "value": "https://us-south.ml.cloud.ibm.com"
+              },
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from lfx.base.models.model import LCModelComponent\nfrom lfx.base.models.unified_models import (\n    get_language_model_options,\n    get_llm,\n    handle_model_input_update,\n)\nfrom lfx.base.models.watsonx_constants import IBM_WATSONX_URLS\nfrom lfx.components.models_and_agents.model_selection import apply_model_overrides\nfrom lfx.field_typing.constants import LanguageModel\nfrom lfx.field_typing.range_spec import RangeSpec\nfrom lfx.inputs.inputs import BoolInput, DropdownInput, StrInput\nfrom lfx.io import IntInput, MessageInput, ModelInput, MultilineInput, SecretStrInput, SliderInput\n\nDEFAULT_OLLAMA_URL = \"http://localhost:11434\"\n\n\nclass LanguageModelComponent(LCModelComponent):\n    display_name = \"Language Model\"\n    description = \"Runs a language model given a specified provider.\"\n    documentation: str = \"https://docs.langflow.org/components-models\"\n    icon = \"brain-circuit\"\n    category = \"models\"\n\n    inputs = [\n        ModelInput(\n            name=\"model\",\n            display_name=\"Language Model\",\n            info=\"Select your model provider\",\n            real_time_refresh=True,\n            required=True,\n        ),\n        StrInput(\n            name=\"model_name\",\n            display_name=\"Model Name Override\",\n            info=(\n                \"Optional model name to use instead of the selected model. \"\n                \"Can be set from a global variable for runtime model selection.\"\n            ),\n            advanced=True,\n            load_from_db=False,\n        ),\n        StrInput(\n            name=\"provider\",\n            display_name=\"Provider Override\",\n            info=(\n                \"Optional provider to use with Model Name Override. Leave blank to use the selected model's provider.\"\n            ),\n            advanced=True,\n            load_from_db=False,\n        ),\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"API Key\",\n            info=\"Overrides global provider settings. Leave blank to use your pre-configured API Key.\",\n            required=False,\n            show=True,\n            real_time_refresh=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"base_url_ibm_watsonx\",\n            display_name=\"watsonx API Endpoint\",\n            info=\"The base URL of the API (IBM watsonx.ai only)\",\n            options=IBM_WATSONX_URLS,\n            value=IBM_WATSONX_URLS[0],\n            combobox=True,\n            show=False,\n            real_time_refresh=True,\n        ),\n        StrInput(\n            name=\"project_id\",\n            display_name=\"watsonx Project ID\",\n            info=\"The project ID associated with the foundation model (IBM watsonx.ai only)\",\n            show=False,\n            required=False,\n        ),\n        StrInput(\n            name=\"ollama_base_url\",\n            display_name=\"Ollama API URL\",\n            info=f\"Endpoint of the Ollama API (Ollama only). Defaults to {DEFAULT_OLLAMA_URL}\",\n            value=DEFAULT_OLLAMA_URL,\n            show=False,\n            real_time_refresh=True,\n        ),\n        MessageInput(\n            name=\"input_value\",\n            display_name=\"Input\",\n            info=\"The input text to send to the model\",\n        ),\n        MultilineInput(\n            name=\"system_message\",\n            display_name=\"System Message\",\n            info=\"A system message that helps set the behavior of the assistant\",\n            advanced=False,\n        ),\n        BoolInput(\n            name=\"stream\",\n            display_name=\"Stream\",\n            info=\"Whether to stream the response\",\n            value=False,\n            advanced=True,\n        ),\n        SliderInput(\n            name=\"temperature\",\n            display_name=\"Temperature\",\n            value=0.0,\n            info=\"Controls randomness in responses\",\n            range_spec=RangeSpec(min=0, max=1, step=0.01),\n            advanced=True,\n        ),\n        IntInput(\n            name=\"max_tokens\",\n            display_name=\"Max Tokens\",\n            info=\"Maximum number of tokens to generate. Field name varies by provider.\",\n            advanced=True,\n            range_spec=RangeSpec(min=1, max=128000, step=1, step_type=\"int\"),\n        ),\n    ]\n\n    def build_model(self) -> LanguageModel:\n        model = apply_model_overrides(\n            self.model,\n            model_name=getattr(self, \"model_name\", None),\n            provider=getattr(self, \"provider\", None),\n            user_id=self.user_id,\n            get_options=get_language_model_options,\n        )\n        return get_llm(\n            model=model,\n            user_id=self.user_id,\n            api_key=self.api_key,\n            temperature=self.temperature,\n            stream=self.stream,\n            max_tokens=getattr(self, \"max_tokens\", None),\n            watsonx_url=getattr(self, \"base_url_ibm_watsonx\", None),\n            watsonx_project_id=getattr(self, \"project_id\", None),\n            ollama_base_url=getattr(self, \"ollama_base_url\", None),\n        )\n\n    def update_build_config(self, build_config: dict, field_value: str, field_name: str | None = None):\n        \"\"\"Dynamically update build config with user-filtered model options.\"\"\"\n        return handle_model_input_update(self, build_config, field_value, field_name)\n"
+              },
+              "input_value": {
+                "_input_type": "MessageInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Input",
+                "dynamic": false,
+                "info": "The input text to send to the model",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "name": "input_value",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "is_refresh": true,
+              "max_tokens": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Max Tokens",
+                "dynamic": false,
+                "info": "Maximum number of tokens to generate. Field name varies by provider.",
+                "list": false,
+                "name": "max_tokens",
+                "override_skip": false,
+                "placeholder": "",
+                "range_spec": {
+                  "max": 128000,
+                  "min": 1,
+                  "step": 1,
+                  "step_type": "int"
+                },
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "int",
+                "value": 0
+              },
+              "model": {
+                "_input_type": "ModelInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Language Model",
+                "dynamic": false,
+                "external_options": {
+                  "fields": {
+                    "data": {
+                      "node": {
+                        "display_name": "Connect other models",
+                        "icon": "CornerDownLeft",
+                        "name": "connect_other_models"
+                      }
+                    }
+                  }
+                },
+                "info": "Select your model provider",
+                "input_types": [
+                  "LanguageModel"
+                ],
+                "list": false,
+                "model_type": "language",
+                "name": "model",
+                "options": [
+                  {
+                    "category": "Google Generative AI",
+                    "icon": "GoogleGenerativeAI",
+                    "metadata": {
+                      "api_key_param": "google_api_key",
+                      "context_length": 1048576,
+                      "max_tokens_field_name": "max_output_tokens",
+                      "model_class": "ChatGoogleGenerativeAIFixed",
+                      "model_name_param": "model",
+                      "reasoning": true,
+                      "reasoning_models": [
+                        "gemini-2.0-flash"
+                      ]
+                    },
+                    "name": "gemini-2.0-flash",
+                    "provider": "Google Generative AI"
+                  }
+                ],
+                "override_skip": false,
+                "placeholder": "Setup Provider",
+                "real_time_refresh": true,
+                "refresh_button": true,
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "track_in_telemetry": false,
+                "type": "model",
+                "value": [
+                  {
+                    "icon": "GoogleGenerativeAI",
+                    "metadata": {
+                      "context_window": 1048576,
+                      "cost_per_million_in": 0.1,
+                      "cost_per_million_out": 0.4,
+                      "created": 1784592000,
+                      "default": true,
+                      "deprecated": false,
+                      "icon": "GoogleGenerativeAI",
+                      "model_type": "llm",
+                      "not_supported": false,
+                      "preview": false,
+                      "reasoning": true,
+                      "search": false,
+                      "tool_calling": true,
+                      "vision": true
+                    },
+                    "name": "gemini-2.0-flash",
+                    "provider": "Google Generative AI"
+                  }
+                ]
+              },
+              "model_name": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Model Name Override",
+                "dynamic": false,
+                "info": "Optional model name to use instead of the selected model. Can be set from a global variable for runtime model selection.",
+                "list": false,
+                "load_from_db": false,
+                "name": "model_name",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "ollama_base_url": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Ollama Base URL",
+                "dynamic": false,
+                "info": "Endpoint of the Ollama API (Ollama only). Defaults to http://localhost:11434",
+                "list": false,
+                "load_from_db": false,
+                "name": "ollama_base_url",
+                "override_skip": false,
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": false,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "http://localhost:11434"
+              },
+              "project_id": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "watsonx Project ID",
+                "dynamic": false,
+                "info": "The project ID associated with the foundation model (IBM watsonx.ai only)",
+                "list": false,
+                "load_from_db": false,
+                "name": "project_id",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": false,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "provider": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Provider Override",
+                "dynamic": false,
+                "info": "Optional provider to use with Model Name Override. Leave blank to use the selected model's provider.",
+                "list": false,
+                "load_from_db": false,
+                "name": "provider",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "stream": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Stream",
+                "dynamic": false,
+                "info": "Whether to stream the response",
+                "list": false,
+                "name": "stream",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "bool",
+                "value": false
+              },
+              "system_message": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "ai_enabled": false,
+                "api_editable": false,
+                "copy_field": false,
+                "display_name": "System Message",
+                "dynamic": false,
+                "info": "A system message that helps set the behavior of the assistant",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "system_message",
+                "override_skip": false,
+                "password": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "temperature": {
+                "_input_type": "SliderInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Temperature",
+                "dynamic": false,
+                "info": "Controls randomness in responses",
+                "max_label": "",
+                "max_label_icon": "",
+                "min_label": "",
+                "min_label_icon": "",
+                "name": "temperature",
+                "override_skip": false,
+                "placeholder": "",
+                "range_spec": {
+                  "max": 1,
+                  "min": 0,
+                  "step": 0.01,
+                  "step_type": "float"
+                },
+                "required": false,
+                "show": true,
+                "slider_buttons": false,
+                "slider_buttons_options": [],
+                "slider_input": false,
+                "title_case": false,
+                "tool_mode": false,
+                "track_in_telemetry": false,
+                "type": "slider",
+                "value": 0.0
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "model_output",
+          "showNode": true,
+          "type": "LanguageModelComponent"
+        },
+        "dragging": false,
+        "id": "LanguageModelComponent-gemini",
+        "measured": {
+          "height": 370,
+          "width": 320
+        },
+        "position": {
+          "x": -450,
+          "y": 480
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "description": "Mengekstrak klausul dari dokumen kebijakan privasi ke dalam 5 Pilar Wajib UU No. 27/2022 (UU PDP).",
+          "display_name": "🔍 PDP 5-Pillar Clause Extractor",
+          "id": "PDPClauseExtractor-node",
+          "node": {
+            "base_classes": [
+              "Data",
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Mengekstrak klausul dari dokumen kebijakan privasi ke dalam 5 Pilar Wajib UU No. 27/2022 (UU PDP).",
+            "display_name": "🔍 PDP 5-Pillar Clause Extractor",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "document_text",
+              "document_name",
+              "llm",
+              "google_api_key"
+            ],
+            "frozen": false,
+            "icon": "FileSearch",
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Extracted Clauses (Data)",
+                "group_outputs": false,
+                "loop_types": null,
+                "method": "extract_clauses",
+                "name": "extracted_data",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Status Ekstraksi (Message)",
+                "group_outputs": false,
+                "loop_types": null,
+                "method": "get_summary_message",
+                "name": "summary_message",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "\"\"\"\nPDPClauseExtractorComponent – Langflow Custom Component untuk ekstraksi 5 pilar UU PDP.\nKompatibel dengan arsitektur LFX / Langflow Desktop v1.x (v1.9.2 - v1.11.0).\n\"\"\"\n\nimport json\nimport os\nimport ssl\nfrom concurrent.futures import ThreadPoolExecutor\nfrom typing import Optional, Any, Dict, List\n\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.io import MessageTextInput, Output, HandleInput, SecretStrInput\nfrom lfx.schema.data import Data\nfrom lfx.schema.message import Message\n\n\n# In-memory global cache across component instantiations to prevent double execution in Langflow\n_GLOBAL_EXTRACTOR_CACHE: Dict[str, Any] = {}\n\n\ndef _bypass_ssl_verification() -> None:\n    try:\n        ssl._create_default_https_context = ssl._create_unverified_context\n    except Exception:\n        pass\n\n    try:\n        _orig_cdc = getattr(ssl, \"_orig_create_default_context\", None)\n        if _orig_cdc is None:\n            _orig_cdc = ssl.create_default_context\n            ssl._orig_create_default_context = _orig_cdc\n\n        def _unverified_cdc(*args, **kwargs):\n            ctx = _orig_cdc(*args, **kwargs)\n            ctx.check_hostname = False\n            ctx.verify_mode = ssl.CERT_NONE\n            return ctx\n\n        ssl.create_default_context = _unverified_cdc\n    except Exception:\n        pass\n\n    try:\n        os.environ[\"PYTHONHTTPSVERIFY\"] = \"0\"\n        os.environ[\"CURL_CA_BUNDLE\"] = \"\"\n        os.environ[\"REQUESTS_CA_BUNDLE\"] = \"\"\n        os.environ[\"SSL_CERT_FILE\"] = \"\"\n    except Exception:\n        pass\n\n    try:\n        import httpx\n        import httpx._config\n\n        def _unverified_httpx_ssl(*args, **kwargs):\n            ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n            ctx.check_hostname = False\n            ctx.verify_mode = ssl.CERT_NONE\n            return ctx\n\n        httpx.create_ssl_context = _unverified_httpx_ssl\n        httpx._config.create_ssl_context = _unverified_httpx_ssl\n    except Exception:\n        pass\n\n    try:\n        import httpcore\n        import httpcore._ssl\n\n        def _unverified_httpcore_ssl(*args, **kwargs):\n            ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n            ctx.check_hostname = False\n            ctx.verify_mode = ssl.CERT_NONE\n            return ctx\n\n        httpcore._ssl.default_ssl_context = _unverified_httpcore_ssl\n    except Exception:\n        pass\n\n    try:\n        import google.genai._api_client\n\n        def _unverified_ensure_httpx_ssl_ctx(options):\n            ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n            ctx.check_hostname = False\n            ctx.verify_mode = ssl.CERT_NONE\n            args = dict(options.client_args or {})\n            args[\"verify\"] = ctx\n            async_args = dict(options.async_client_args or {})\n            async_args[\"verify\"] = ctx\n            return args, async_args\n\n        google.genai._api_client.BaseApiClient._ensure_httpx_ssl_ctx = staticmethod(_unverified_ensure_httpx_ssl_ctx)\n    except Exception:\n        pass\n\n\n_bypass_ssl_verification()\n\n\nPILLAR_SPECS = [\n    {\n        \"id\": \"PILAR_1\",\n        \"name\": \"Dasar Pemrosesan Data\",\n        \"desc\": \"Klausul tentang dasar hukum pemrosesan data, persetujuan eksplisit pengguna, pelaksanaan kontrak, atau kewajiban hukum (Pasal 20 UU PDP).\"\n    },\n    {\n        \"id\": \"PILAR_2\",\n        \"name\": \"Hak Subjek Data Pribadi\",\n        \"desc\": \"Klausul tentang hak-hak pengguna sebagai subjek data: hak akses, perbaikan/koreksi, penarikan persetujuan, penghapusan, ganti rugi, atau keberatan (Pasal 5 s.d. 13 UU PDP).\"\n    },\n    {\n        \"id\": \"PILAR_3\",\n        \"name\": \"Kewajiban Pengamanan Data\",\n        \"desc\": \"Klausul tentang langkah teknis dan operasional perlindungan data, enkripsi data saat transit dan penyimpanan (at-rest), serta kontrol akses (Pasal 35 & 39 UU PDP).\"\n    },\n    {\n        \"id\": \"PILAR_4\",\n        \"name\": \"Notifikasi Insiden Kebocoran Data\",\n        \"desc\": \"Klausul tentang kewajiban dan batas waktu pemberitahuan tertulis jika terjadi insiden keamanan atau kegagalan perlindungan data pribadi (Pasal 46 UU PDP).\"\n    },\n    {\n        \"id\": \"PILAR_5\",\n        \"name\": \"Retensi & Penghapusan Data\",\n        \"desc\": \"Klausul tentang masa retensi/jangka waktu penyimpanan data pribadi serta prosedur dan jadwal penghapusan atau pemusnahan data (Pasal 43 & 44 UU PDP).\"\n    }\n]\n\n\nclass PDPClauseExtractorComponent(Component):\n    display_name: str = \"PDP 5-Pillar Clause Extractor\"\n    description: str = (\n        \"Mengekstrak klausul dari dokumen kebijakan privasi ke dalam 5 Pilar Wajib UU No. 27/2022 (UU PDP) \"\n        \"menggunakan LLM Structured Output.\"\n    )\n    icon: str = \"FileSearch\"\n    name: str = \"PDPClauseExtractor\"\n\n    inputs = [\n        MessageTextInput(\n            name=\"document_text\",\n            display_name=\"Teks Kebijakan Privasi\",\n            info=\"Teks utuh dokumen kebijakan privasi yang akan diaudit (atau pesan dari Chat Input).\",\n            required=True,\n        ),\n        MessageTextInput(\n            name=\"document_name\",\n            display_name=\"Nama Dokumen\",\n            value=\"Sample_Policy_PT_Contoh_Digital.pdf\",\n            info=\"Nama dokumen untuk pelaporan audit.\",\n        ),\n        HandleInput(\n            name=\"llm\",\n            display_name=\"Language Model\",\n            input_types=[\"LanguageModel\"],\n            info=\"Model LLM (misalnya Google Generative AI / Gemini) dengan temperature 0.0.\",\n            required=False,\n        ),\n        SecretStrInput(\n            name=\"google_api_key\",\n            display_name=\"Google API Key (Opsional)\",\n            info=\"Opsional: masukkan jika tidak menyambungkan node Language Model terpisah.\",\n        ),\n    ]\n\n    outputs = [\n        Output(name=\"extracted_data\", display_name=\"Extracted Clauses (Data)\", method=\"extract_clauses\"),\n        Output(name=\"summary_message\", display_name=\"Status Ekstraksi (Message)\", method=\"get_summary_message\"),\n    ]\n\n    def _extract_text_from_content(self, content: Any) -> str:\n        \"\"\"Ekstraksi teks bersih dari berbagai tipe return LLM (str, list, dict, message).\"\"\"\n        if isinstance(content, str):\n            return content\n        if isinstance(content, list):\n            parts = []\n            for item in content:\n                if isinstance(item, str):\n                    parts.append(item)\n                elif isinstance(item, dict):\n                    if \"text\" in item:\n                        parts.append(str(item[\"text\"]))\n                    elif \"content\" in item:\n                        parts.append(str(item[\"content\"]))\n                    else:\n                        parts.append(str(item))\n                elif hasattr(item, \"text\"):\n                    parts.append(str(getattr(item, \"text\", \"\")))\n                elif hasattr(item, \"content\"):\n                    parts.append(str(getattr(item, \"content\", \"\")))\n                else:\n                    parts.append(str(item))\n            return \"\".join(parts)\n        if isinstance(content, dict):\n            if \"text\" in content:\n                return str(content[\"text\"])\n            if \"content\" in content:\n                return str(content[\"content\"])\n            return json.dumps(content)\n        if hasattr(content, \"text\"):\n            return str(getattr(content, \"text\", \"\"))\n        return str(content or \"\")\n\n    def _call_llm(self, prompt: str) -> str:\n        \"\"\"Panggil model LLM via Langflow connection atau google-genai langsung.\"\"\"\n        _bypass_ssl_verification()\n\n        if hasattr(self, \"llm\") and self.llm is not None:\n            try:\n                client = getattr(self.llm, \"client\", None)\n                if client:\n                    httpx_c = getattr(client, \"_httpx_client\", None)\n                    if httpx_c:\n                        transport = getattr(httpx_c, \"_transport\", None)\n                        if transport and hasattr(transport, \"_pool\"):\n                            pool = transport._pool\n                            if hasattr(pool, \"_ssl_context\") and pool._ssl_context:\n                                pool._ssl_context.check_hostname = False\n                                pool._ssl_context.verify_mode = ssl.CERT_NONE\n            except Exception:\n                pass\n\n            if hasattr(self.llm, \"invoke\"):\n                res = self.llm.invoke(prompt)\n                content = getattr(res, \"content\", res)\n                return self._extract_text_from_content(content)\n            elif callable(self.llm):\n                res = self.llm(prompt)\n                content = getattr(res, \"content\", res)\n                return self._extract_text_from_content(content)\n\n        # Fallback via google-genai SDK jika API key diisi langsung\n        api_key = getattr(self, \"google_api_key\", None)\n        if api_key:\n            try:\n                from google import genai\n                from google.genai import types\n                client = genai.Client(\n                    api_key=api_key,\n                    http_options=types.HttpOptions(\n                        client_args={\"verify\": False},\n                        async_client_args={\"verify\": False}\n                    )\n                )\n                response = client.models.generate_content(\n                    model=\"gemini-2.0-flash\",\n                    contents=[prompt],\n                    config=types.GenerateContentConfig(temperature=0.0)\n                )\n                return getattr(response, \"text\", str(response))\n            except Exception as e:\n                raise RuntimeError(f\"Gagal memanggil Gemini via SDK fallback: {e}\")\n\n        raise ValueError(\"Node LLM belum disambungkan dan Google API Key tidak diisi pada komponen!\")\n\n    def _clean_json_response(self, text: Any) -> dict:\n        \"\"\"Membersihkan markdown code fence dari output LLM.\"\"\"\n        if isinstance(text, dict):\n            return text\n        if isinstance(text, list):\n            text = self._extract_text_from_content(text)\n        elif not isinstance(text, str):\n            text = str(text or \"\")\n\n        cleaned = text.strip()\n        if cleaned.startswith(\"```\"):\n            lines = cleaned.split(\"\\n\")\n            if lines[0].startswith(\"```\"):\n                lines = lines[1:]\n            if lines and lines[-1].strip() == \"```\":\n                lines = lines[:-1]\n            cleaned = \"\\n\".join(lines).strip()\n\n        try:\n            return json.loads(cleaned)\n        except json.JSONDecodeError:\n            start_idx = cleaned.find(\"{\")\n            end_idx = cleaned.rfind(\"}\")\n            if start_idx != -1 and end_idx != -1 and end_idx > start_idx:\n                return json.loads(cleaned[start_idx : end_idx + 1])\n            raise\n\n    def extract_clauses(self) -> Data:\n        # Ekstraksi teks dokumen\n        doc_raw = self.document_text\n        if hasattr(doc_raw, \"text\"):\n            doc_text = doc_raw.text or \"\"\n        elif isinstance(doc_raw, list):\n            doc_parts = []\n            for item in doc_raw:\n                if hasattr(item, \"text\"):\n                    doc_parts.append(str(item.text or \"\"))\n                else:\n                    doc_parts.append(str(item or \"\"))\n            doc_text = \"\\n\".join(doc_parts)\n        else:\n            doc_text = str(doc_raw or \"\")\n\n        doc_name_raw = self.document_name or \"Dokumen Kebijakan Privasi\"\n        if hasattr(doc_name_raw, \"text\"):\n            doc_name = str(doc_name_raw.text)\n        elif isinstance(doc_name_raw, list):\n            doc_name = \" \".join(str(getattr(x, \"text\", x)) for x in doc_name_raw)\n        else:\n            doc_name = str(doc_name_raw)\n\n        # Global in-memory cache check: jika Langflow memanggil output kedua (summary_message),\n        # return langsung dalam 0.0001 detik tanpa memanggil LLM lagi\n        cache_key = f\"{doc_name}:::{doc_text}\"\n        if cache_key in _GLOBAL_EXTRACTOR_CACHE:\n            return _GLOBAL_EXTRACTOR_CACHE[cache_key]\n\n        sample_doc = doc_text[:50000]\n\n        def _extract_single_pillar(spec: Dict[str, str]) -> Dict[str, Any]:\n            pid = spec[\"id\"]\n            pname = spec[\"name\"]\n            pdesc = spec[\"desc\"]\n\n            prompt = (\n                \"Anda adalah Parser Hukum Dokumen Kebijakan Privasi untuk UU No. 27/2022 (UU PDP).\\n\"\n                f\"Tugas: Ekstrak klausul yang relevan dengan pilar {pid} ({pname}) dari dokumen kebijakan privasi berikut.\\n\\n\"\n                f\"DESKRIPSI PILAR:\\n{pdesc}\\n\\n\"\n                \"DOKUMEN KEBIJAKAN PRIVASI:\\n\"\n                f\"```\\n{sample_doc}\\n```\\n\\n\"\n                \"ATURAN EKSTRAKSI:\\n\"\n                \"1. Jika klausul pilar ini DITEMUKAN dalam dokumen:\\n\"\n                \"   - set found: true\\n\"\n                \"   - set raw_text: kutipan teks asli persis dari dokumen (verbatim)\\n\"\n                \"   - set summary: ringkasan 1-2 kalimat tentang maksud klausul\\n\"\n                \"   - set source_section: nama/nomor bagian tempat klausul ditemukan (misal: '2. DASAR PEMROSESAN DATA')\\n\"\n                \"2. Jika pilar ini TIDAK DISEBUTKAN sama sekali dalam dokumen:\\n\"\n                \"   - set found: false\\n\"\n                \"   - set raw_text: null\\n\"\n                \"   - set summary: null\\n\"\n                \"   - set source_section: null\\n\\n\"\n                \"Kembalikan HANYA format JSON valid:\\n\"\n                \"```json\\n\"\n                \"{\\n\"\n                f'  \"pillar_id\": \"{pid}\",\\n'\n                '  \"found\": true,\\n'\n                '  \"raw_text\": \"...\",\\n'\n                '  \"summary\": \"...\",\\n'\n                '  \"source_section\": \"...\"\\n'\n                \"}\\n\"\n                \"```\"\n            )\n\n            try:\n                raw_out = self._call_llm(prompt)\n                parsed = self._clean_json_response(raw_out)\n                if isinstance(parsed, list) and parsed and isinstance(parsed[0], dict):\n                    parsed = parsed[0]\n                elif not isinstance(parsed, dict):\n                    parsed = {}\n            except Exception:\n                parsed = {}\n\n            is_found = bool(parsed.get(\"found\", False))\n            raw_t = parsed.get(\"raw_text\")\n            return {\n                \"pillar_id\": pid,\n                \"found\": is_found,\n                \"raw_text\": str(raw_t) if (is_found and raw_t) else None,\n                \"summary\": str(parsed.get(\"summary\")) if (is_found and parsed.get(\"summary\")) else None,\n                \"source_section\": str(parsed.get(\"source_section\")) if (is_found and parsed.get(\"source_section\")) else None\n            }\n\n        # Ekstraksi paralel 5 pilar dengan 5 worker threads (memangkas waktu dari 88s menjadi ~8-10s)\n        with ThreadPoolExecutor(max_workers=5) as executor:\n            extracted_pillars = list(executor.map(_extract_single_pillar, PILLAR_SPECS))\n\n        result_data = Data(data={\n            \"document_name\": doc_name,\n            \"extracted_pillars\": extracted_pillars\n        })\n\n        # Simpan ke global cache\n        _GLOBAL_EXTRACTOR_CACHE[cache_key] = result_data\n        self._cached_key = cache_key\n        self._cached_result = result_data\n        return result_data\n\n    def get_summary_message(self) -> Message:\n        extracted = self.extract_clauses()\n        data = extracted.data if hasattr(extracted, \"data\") else {}\n        pillars = data.get(\"extracted_pillars\", [])\n        found_cnt = sum(1 for p in pillars if p.get(\"found\"))\n        doc_title = str(data.get(\"document_name\", \"\"))\n        lines = [f\"### Hasil Ekstraksi Dokumen: {doc_title}\"]\n        lines.append(f\"Ditemukan **{found_cnt}/5 pilar** dalam dokumen kebijakan privasi:\")\n        for p in pillars:\n            is_found = bool(p.get(\"found\"))\n            icon = \"✅\" if is_found else \"❌\"\n            p_id = str(p.get(\"pillar_id\", \"\"))\n            p_sum = str(p.get(\"summary\") or \"Tidak disebutkan\")\n            lines.append(f\"- {icon} **{p_id}**: {p_sum}\")\n        return Message(text=\"\\n\".join(lines))\n"
+              },
+              "document_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Nama Dokumen",
+                "dynamic": false,
+                "info": "Nama dokumen untuk pelaporan.",
+                "list": false,
+                "name": "document_name",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": "Sample_Policy_PT_Contoh_Digital.pdf"
+              },
+              "document_text": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Teks Kebijakan Privasi",
+                "dynamic": false,
+                "info": "Teks utuh dokumen kebijakan privasi yang akan diaudit.",
+                "input_types": [
+                  "Message",
+                  "str"
+                ],
+                "list": false,
+                "name": "document_text",
+                "override_skip": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "google_api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": true,
+                "display_name": "Google API Key (Opsional)",
+                "dynamic": false,
+                "info": "Opsional: masukkan jika tidak menyambungkan node Language Model terpisah.",
+                "list": false,
+                "load_from_db": false,
+                "name": "google_api_key",
+                "password": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "llm": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Language Model",
+                "dynamic": false,
+                "info": "Model LLM (misalnya Google Generative AI / Gemini) dengan temperature 0.0.",
+                "input_types": [
+                  "LanguageModel"
+                ],
+                "list": false,
+                "name": "llm",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "other",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "extracted_data",
+          "showNode": true,
+          "type": "PDPClauseExtractorComponent"
+        },
+        "dragging": false,
+        "id": "PDPClauseExtractor-node",
+        "measured": {
+          "height": 380,
+          "width": 320
+        },
+        "position": {
+          "x": 80,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "description": "Mengambil teks resmi pasal UU No. 27/2022 (LNRI 196) yang menjadi dasar hukum mandat untuk 5 pilar wajib secara tertutup.",
+          "display_name": "⚖️ Targeted Legal Retriever (Closed-RAG)",
+          "id": "PDPLegalRetriever-node",
+          "node": {
+            "base_classes": [
+              "Data",
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Mengambil teks resmi pasal UU No. 27/2022 (LNRI 196) yang menjadi dasar hukum mandat untuk 5 pilar wajib secara tertutup.",
+            "display_name": "⚖️ Targeted Legal Retriever (Closed-RAG)",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "extracted_data"
+            ],
+            "frozen": false,
+            "icon": "BookMarked",
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Retrieved Legal Context (Data)",
+                "group_outputs": false,
+                "loop_types": null,
+                "method": "retrieve_context",
+                "name": "retrieved_context",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Ringkasan Konteks Hukum (Message)",
+                "group_outputs": false,
+                "loop_types": null,
+                "method": "get_preview_message",
+                "name": "preview_message",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "\"\"\"\nPDPLegalRetrieverComponent – Langflow Custom Component untuk Closed-RAG Retrieval UU PDP.\nKompatibel dengan arsitektur LFX / Langflow Desktop v1.x (v1.9.2 - v1.11.0).\n\"\"\"\n\nfrom typing import Dict, Any, List\n\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.io import Output, HandleInput\nfrom lfx.schema.data import Data\nfrom lfx.schema.message import Message\n\n# Ground Truth Naskah Resmi UU No. 27 Tahun 2022 (LNRI Tahun 2022 No. 196)\nOFFICIAL_UU_PDP_ARTICLES: Dict[str, Dict[str, Any]] = {\n    \"PILAR_1\": {\n        \"name\": \"Dasar Pemrosesan Data\",\n        \"pasal_list\": [\"Pasal 20\"],\n        \"content\": (\n            \"Pasal 20 UU No. 27 Tahun 2022:\\n\"\n            \"(1) Pengendali Data Pribadi wajib memiliki dasar pemrosesan Data Pribadi.\\n\"\n            \"(2) Dasar pemrosesan Data Pribadi sebagaimana dimaksud pada ayat (1) meliputi:\\n\"\n            \"a. persetujuan yang sah secara eksplisit dari Subjek Data Pribadi untuk 1 (satu) atau beberapa tujuan tertentu yang telah disampaikan oleh Pengendali Data Pribadi kepada Subjek Data Pribadi;\\n\"\n            \"b. pemenuhan kewajiban perjanjian dalam hal Subjek Data Pribadi merupakan salah satu pihak atau untuk memenuhi permintaan Subjek Data Pribadi pada saat akan melakukan perjanjian;\\n\"\n            \"c. pemenuhan kewajiban hukum dari Pengendali Data Pribadi sesuai dengan ketentuan peraturan perundang-undangan;\\n\"\n            \"d. pemenuhan pelindungan kepentingan vital Subjek Data Pribadi;\\n\"\n            \"e. pelaksanaan tugas dalam rangka kepentingan umum, pelayanan publik, atau pelaksanaan kewenangan Pengendali Data Pribadi berdasarkan peraturan perundang-undangan; dan/atau\\n\"\n            \"f. pemenuhan kepentingan yang sah lainnya dengan memperhatikan tujuan, kebutuhan, dan keseimbangan kepentingan Pengendali Data Pribadi dan hak Subjek Data Pribadi.\"\n        )\n    },\n    \"PILAR_2\": {\n        \"name\": \"Hak Subjek Data Pribadi\",\n        \"pasal_list\": [\"Pasal 5\", \"Pasal 6\", \"Pasal 7\", \"Pasal 8\", \"Pasal 9\", \"Pasal 10\", \"Pasal 11\", \"Pasal 12\", \"Pasal 13\"],\n        \"content\": (\n            \"Pasal 5 s.d. Pasal 13 UU No. 27 Tahun 2022:\\n\"\n            \"Pasal 5: Subjek Data Pribadi berhak mendapatkan informasi tentang kejelasan identitas, dasar kepentingan hukum, tujuan permintaan dan penggunaan Data Pribadi, dan akuntabilitas pihak yang meminta Data Pribadi.\\n\"\n            \"Pasal 6: Subjek Data Pribadi berhak melengkapi, memperbarui, dan/atau memperbaiki kesalahan dan/atau ketidakakuratan Data Pribadi tentang dirinya sesuai dengan tujuan pemrosesan Data Pribadi.\\n\"\n            \"Pasal 7: Subjek Data Pribadi berhak mendapatkan akses dan memperoleh salinan Data Pribadi tentang dirinya sesuai dengan ketentuan peraturan perundang-undangan.\\n\"\n            \"Pasal 8: Subjek Data Pribadi berhak untuk mengakhiri pemrosesan, menghapus, dan/atau memusnahkan Data Pribadi tentang dirinya sesuai dengan ketentuan peraturan perundang-undangan.\\n\"\n            \"Pasal 9: Subjek Data Pribadi berhak menarik kembali persetujuan pemrosesan Data Pribadi tentang dirinya yang telah diberikan kepada Pengendali Data Pribadi.\\n\"\n            \"Pasal 10: Subjek Data Pribadi berhak untuk mengajukan keberatan atas tindakan pengambilan keputusan yang hanya didasarkan pada pemrosesan secara otomatis, termasuk pemrofilan, yang menimbulkan akibat hukum atau berdampak signifikan pada Subjek Data Pribadi.\\n\"\n            \"Pasal 11: Subjek Data Pribadi berhak menunda atau membatasi pemrosesan Data Pribadi secara proporsional sesuai dengan tujuan pemrosesan Data Pribadi.\\n\"\n            \"Pasal 12: Subjek Data Pribadi berhak menggugat dan menerima ganti rugi atas pelanggaran pemrosesan Data Pribadi tentang dirinya.\\n\"\n            \"Pasal 13: Subjek Data Pribadi berhak mendapatkan dan/atau menggunakan Data Pribadi tentang dirinya dari Pengendali Data Pribadi dalam bentuk yang lazim digunakan atau dapat dibaca oleh sistem elektronik (hak portabilitas data).\"\n        )\n    },\n    \"PILAR_3\": {\n        \"name\": \"Kewajiban Pengamanan & Pengendalian\",\n        \"pasal_list\": [\"Pasal 35\", \"Pasal 39\"],\n        \"content\": (\n            \"Pasal 35 UU No. 27 Tahun 2022:\\n\"\n            \"(1) Pengendali Data Pribadi wajib melindungi dan memastikan keamanan Data Pribadi yang diprosesnya, dengan melakukan:\\n\"\n            \"a. penyusunan dan penerapan langkah teknis operasional untuk melindungi Data Pribadi dari gangguan pemrosesan Data Pribadi yang bertentangan dengan ketentuan peraturan perundang-undangan; dan\\n\"\n            \"b. penentuan tingkat keamanan Data Pribadi dengan memperhatikan sifat dan risiko dari Data Pribadi yang harus dilindungi dalam pemrosesan Data Pribadi.\\n\"\n            \"(2) Dalam melakukan pemrosesan Data Pribadi, Pengendali Data Pribadi wajib menjaga kerahasiaan Data Pribadi.\\n\"\n            \"(3) Kewajiban menjaga kerahasiaan Data Pribadi sebagaimana dimaksud pada ayat (2) berlaku juga terhadap Prosesor Data Pribadi.\\n\\n\"\n            \"Pasal 39 UU No. 27 Tahun 2022:\\n\"\n            \"(1) Pengendali Data Pribadi wajib mencegah Data Pribadi diakses secara tidak sah dengan menerapkan sistem keamanan terhadap Data Pribadi yang diprosesnya.\\n\"\n            \"(2) Penerapan sistem keamanan sebagaimana dimaksud pada ayat (1) dilakukan dengan:\\n\"\n            \"a. menyusun dan menerapkan langkah teknis dan operasional untuk melindungi Data Pribadi;\\n\"\n            \"b. menentukan tingkat keamanan Data Pribadi dengan memperhatikan sifat dan risiko dari Data Pribadi yang harus dilindungi; dan\\n\"\n            \"c. memastikan langkah teknis operasional sebagaimana dimaksud pada huruf a dan huruf b dilakukan sesuai dengan standar keamanan yang berlaku.\"\n        )\n    },\n    \"PILAR_4\": {\n        \"name\": \"Notifikasi Insiden Kebocoran Data\",\n        \"pasal_list\": [\"Pasal 46\"],\n        \"content\": (\n            \"Pasal 46 UU No. 27 Tahun 2022:\\n\"\n            \"(1) Dalam hal terjadi kegagalan Pelindungan Data Pribadi, Pengendali Data Pribadi wajib menyampaikan pemberitahuan secara tertulis paling lambat 3 x 24 (tiga kali dua puluh empat) jam kepada:\\n\"\n            \"a. Subjek Data Pribadi; dan\\n\"\n            \"b. lembaga.\\n\"\n            \"(2) Pemberitahuan tertulis sebagaimana dimaksud pada ayat (1) minimal memuat:\\n\"\n            \"a. Data Pribadi yang terungkap;\\n\"\n            \"b. kapan dan bagaimana Data Pribadi terungkap; dan\\n\"\n            \"c. upaya penanganan dan pemulihan atas terungkapnya Data Pribadi oleh Pengendali Data Pribadi.\\n\"\n            \"(3) Dalam hal tertentu, Pengendali Data Pribadi wajib memberitahukan kepada masyarakat mengenai kegagalan Pelindungan Data Pribadi.\"\n        )\n    },\n    \"PILAR_5\": {\n        \"name\": \"Retensi & Penghapusan Data\",\n        \"pasal_list\": [\"Pasal 43\", \"Pasal 44\"],\n        \"content\": (\n            \"Pasal 43 UU No. 27 Tahun 2022:\\n\"\n            \"(1) Pengendali Data Pribadi wajib menghapus Data Pribadi dalam hal:\\n\"\n            \"a. Data Pribadi telah tidak lagi diperlukan untuk pencapaian tujuan pemrosesan Data Pribadi;\\n\"\n            \"b. Subjek Data Pribadi telah melakukan penarikan kembali persetujuan pemrosesan Data Pribadi;\\n\"\n            \"c. terdapat permintaan dari Subjek Data Pribadi; atau\\n\"\n            \"d. Data Pribadi diperoleh dan/atau diproses dengan cara melawan hukum.\\n\\n\"\n            \"Pasal 44 UU No. 27 Tahun 2022:\\n\"\n            \"(1) Pengendali Data Pribadi wajib memusnahkan Data Pribadi dalam hal:\\n\"\n            \"a. masa retensi telah berakhir dan terdapat keterangan untuk dimusnahkan berdasarkan jadwal retensi arsip;\\n\"\n            \"b. terdapat permintaan dari Subjek Data Pribadi, kecuali ditentukan lain oleh peraturan perundang-undangan; atau\\n\"\n            \"c. tidak berkaitan dengan penyelesaian proses hukum suatu perkara.\\n\"\n            \"(2) Pemusnahan Data Pribadi sebagaimana dimaksud pada ayat (1) dilakukan dengan cara:\\n\"\n            \"a. tidak menampilkan kembali Data Pribadi dalam sistem elektronik; dan/atau\\n\"\n            \"b. merusak fisik dokumen Data Pribadi.\"\n        )\n    }\n}\n\n\nclass PDPLegalRetrieverComponent(Component):\n    display_name: str = \"Targeted Legal Retriever (Closed-RAG)\"\n    description: str = (\n        \"Mengambil teks resmi pasal UU No. 27/2022 (LNRI 196) yang menjadi dasar hukum mandat \"\n        \"untuk 5 pilar wajib secara tertutup (closed-world).\"\n    )\n    icon: str = \"BookMarked\"\n    name: str = \"PDPLegalRetriever\"\n\n    inputs = [\n        HandleInput(\n            name=\"extracted_data\",\n            display_name=\"Extracted Clauses Data\",\n            input_types=[\"Data\"],\n            info=\"Data hasil ekstraksi klausul dari komponen PDP Clause Extractor.\",\n            required=True,\n        ),\n    ]\n\n    outputs = [\n        Output(name=\"retrieved_context\", display_name=\"Retrieved Legal Context (Data)\", method=\"retrieve_context\"),\n        Output(name=\"preview_message\", display_name=\"Ringkasan Konteks Hukum (Message)\", method=\"get_preview_message\"),\n    ]\n\n    def retrieve_context(self) -> Data:\n        input_data = self.extracted_data.data if hasattr(self.extracted_data, \"data\") else {}\n        extracted_pillars = input_data.get(\"extracted_pillars\", [])\n        doc_name = input_data.get(\"document_name\", \"privacy_policy\")\n\n        paired_results = []\n        for p in extracted_pillars:\n            pid = p.get(\"pillar_id\")\n            official_ref = OFFICIAL_UU_PDP_ARTICLES.get(pid, {\n                \"name\": pid,\n                \"pasal_list\": [],\n                \"content\": \"Tidak ada pasal terdaftar.\"\n            })\n\n            paired_results.append({\n                \"pillar_id\": pid,\n                \"pillar_name\": official_ref[\"name\"],\n                \"pasal_target\": official_ref[\"pasal_list\"],\n                \"found_in_doc\": p.get(\"found\", False),\n                \"raw_clause_text\": p.get(\"raw_text\") if p.get(\"found\") else None,\n                \"summary\": p.get(\"summary\"),\n                \"source_section\": p.get(\"source_section\"),\n                \"official_articles_text\": official_ref[\"content\"]\n            })\n\n        return Data(data={\n            \"document_name\": doc_name,\n            \"paired_pillars\": paired_results\n        })\n\n    def get_preview_message(self) -> Message:\n        res = self.retrieve_context()\n        data = res.data if hasattr(res, \"data\") else {}\n        pairs = data.get(\"paired_pillars\", [])\n        lines = [\"### Konteks Hukum UU No. 27/2022 (Resmi LNRI 196) Berhasil Dipetakan:\"]\n        for item in pairs:\n            pid = str(item.get(\"pillar_id\", \"\"))\n            pname = str(item.get(\"pillar_name\", \"\"))\n            pasal_list = item.get(\"pasal_target\") or []\n            pasal_str = \", \".join(pasal_list) if pasal_list else \"-\"\n            is_found = bool(item.get(\"found_in_doc\"))\n            found_str = \"Klausul Ditemukan\" if is_found else \"Klausul Nihil\"\n            lines.append(f\"- **{pid} ({pname})**: Rujukan {pasal_str} ({found_str})\")\n        return Message(text=\"\\n\".join(lines))\n"
+              },
+              "extracted_data": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Extracted Clauses Data",
+                "dynamic": false,
+                "info": "Data hasil ekstraksi klausul dari komponen PDP Clause Extractor.",
+                "input_types": [
+                  "Data"
+                ],
+                "list": false,
+                "name": "extracted_data",
+                "override_skip": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "other",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "retrieved_context",
+          "showNode": true,
+          "type": "PDPLegalRetrieverComponent"
+        },
+        "dragging": false,
+        "id": "PDPLegalRetriever-node",
+        "measured": {
+          "height": 300,
+          "width": 320
+        },
+        "position": {
+          "x": 580,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "description": "Mengevaluasi kepatuhan klausul kebijakan privasi terhadap pasal resmi UU PDP secara tertutup (Strict Grounding, Temperature 0.0).",
+          "display_name": "🛡️ Strict Closed-RAG Compliance Checker",
+          "id": "PDPComplianceChecker-node",
+          "node": {
+            "base_classes": [
+              "Data",
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Mengevaluasi kepatuhan klausul kebijakan privasi terhadap pasal resmi UU PDP secara tertutup (Strict Grounding, Temperature 0.0).",
+            "display_name": "🛡️ Strict Closed-RAG Compliance Checker",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "retrieved_data",
+              "llm",
+              "google_api_key"
+            ],
+            "frozen": false,
+            "icon": "ShieldCheck",
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Compliance Results (Data)",
+                "group_outputs": false,
+                "loop_types": null,
+                "method": "evaluate_compliance",
+                "name": "compliance_results",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Status Evaluasi (Message)",
+                "group_outputs": false,
+                "loop_types": null,
+                "method": "get_status_message",
+                "name": "status_message",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "\"\"\"\nPDPComplianceCheckerComponent – Langflow Custom Component untuk Strict Closed-RAG Compliance Checker.\nKompatibel dengan arsitektur LFX / Langflow Desktop v1.x (v1.9.2 - v1.11.0).\n\"\"\"\n\nimport json\nimport os\nimport ssl\nfrom concurrent.futures import ThreadPoolExecutor\nfrom typing import Dict, Any, List\n\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.io import Output, HandleInput, SecretStrInput\nfrom lfx.schema.data import Data\nfrom lfx.schema.message import Message\n\n\n_GLOBAL_COMPLIANCE_CACHE: Dict[str, Any] = {}\n\n\ndef _bypass_ssl_verification() -> None:\n    try:\n        ssl._create_default_https_context = ssl._create_unverified_context\n    except Exception:\n        pass\n\n    try:\n        _orig_cdc = getattr(ssl, \"_orig_create_default_context\", None)\n        if _orig_cdc is None:\n            _orig_cdc = ssl.create_default_context\n            ssl._orig_create_default_context = _orig_cdc\n\n        def _unverified_cdc(*args, **kwargs):\n            ctx = _orig_cdc(*args, **kwargs)\n            ctx.check_hostname = False\n            ctx.verify_mode = ssl.CERT_NONE\n            return ctx\n\n        ssl.create_default_context = _unverified_cdc\n    except Exception:\n        pass\n\n    try:\n        os.environ[\"PYTHONHTTPSVERIFY\"] = \"0\"\n        os.environ[\"CURL_CA_BUNDLE\"] = \"\"\n        os.environ[\"REQUESTS_CA_BUNDLE\"] = \"\"\n        os.environ[\"SSL_CERT_FILE\"] = \"\"\n    except Exception:\n        pass\n\n    try:\n        import httpx\n        import httpx._config\n\n        def _unverified_httpx_ssl(*args, **kwargs):\n            ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n            ctx.check_hostname = False\n            ctx.verify_mode = ssl.CERT_NONE\n            return ctx\n\n        httpx.create_ssl_context = _unverified_httpx_ssl\n        httpx._config.create_ssl_context = _unverified_httpx_ssl\n    except Exception:\n        pass\n\n    try:\n        import httpcore\n        import httpcore._ssl\n\n        def _unverified_httpcore_ssl(*args, **kwargs):\n            ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n            ctx.check_hostname = False\n            ctx.verify_mode = ssl.CERT_NONE\n            return ctx\n\n        httpcore._ssl.default_ssl_context = _unverified_httpcore_ssl\n    except Exception:\n        pass\n\n    try:\n        import google.genai._api_client\n\n        def _unverified_ensure_httpx_ssl_ctx(options):\n            ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n            ctx.check_hostname = False\n            ctx.verify_mode = ssl.CERT_NONE\n            args = dict(options.client_args or {})\n            args[\"verify\"] = ctx\n            async_args = dict(options.async_client_args or {})\n            async_args[\"verify\"] = ctx\n            return args, async_args\n\n        google.genai._api_client.BaseApiClient._ensure_httpx_ssl_ctx = staticmethod(_unverified_ensure_httpx_ssl_ctx)\n    except Exception:\n        pass\n\n\n_bypass_ssl_verification()\n\n\nclass PDPComplianceCheckerComponent(Component):\n    display_name: str = \"Strict Closed-RAG Compliance Checker\"\n    description: str = (\n        \"Mengevaluasi kepatuhan klausul kebijakan privasi terhadap pasal resmi UU PDP \"\n        \"secara tertutup (Strict Grounding, Temperature 0.0) tanpa halusinasi eksternal.\"\n    )\n    icon: str = \"ShieldCheck\"\n    name: str = \"PDPComplianceChecker\"\n\n    inputs = [\n        HandleInput(\n            name=\"retrieved_data\",\n            display_name=\"Retrieved Legal Context Data\",\n            input_types=[\"Data\"],\n            info=\"Data pasangan klausul dokumen dan pasal resmi UU PDP dari komponen Legal Retriever.\",\n            required=True,\n        ),\n        HandleInput(\n            name=\"llm\",\n            display_name=\"Language Model\",\n            input_types=[\"LanguageModel\"],\n            info=\"Model LLM (misalnya Google Generative AI / Gemini) dengan temperature 0.0.\",\n            required=False,\n        ),\n        SecretStrInput(\n            name=\"google_api_key\",\n            display_name=\"Google API Key (Opsional)\",\n            info=\"Opsional: masukkan jika tidak menyambungkan node Language Model terpisah.\",\n        ),\n    ]\n\n    outputs = [\n        Output(name=\"compliance_results\", display_name=\"Compliance Results (Data)\", method=\"evaluate_compliance\"),\n        Output(name=\"status_message\", display_name=\"Status Evaluasi (Message)\", method=\"get_status_message\"),\n    ]\n\n    def _extract_text_from_content(self, content: Any) -> str:\n        \"\"\"Ekstraksi teks bersih dari berbagai tipe return LLM (str, list, dict, message).\"\"\"\n        if isinstance(content, str):\n            return content\n        if isinstance(content, list):\n            parts = []\n            for item in content:\n                if isinstance(item, str):\n                    parts.append(item)\n                elif isinstance(item, dict):\n                    if \"text\" in item:\n                        parts.append(str(item[\"text\"]))\n                    elif \"content\" in item:\n                        parts.append(str(item[\"content\"]))\n                    else:\n                        parts.append(str(item))\n                elif hasattr(item, \"text\"):\n                    parts.append(str(getattr(item, \"text\", \"\")))\n                elif hasattr(item, \"content\"):\n                    parts.append(str(getattr(item, \"content\", \"\")))\n                else:\n                    parts.append(str(item))\n            return \"\".join(parts)\n        if isinstance(content, dict):\n            if \"text\" in content:\n                return str(content[\"text\"])\n            if \"content\" in content:\n                return str(content[\"content\"])\n            return json.dumps(content)\n        if hasattr(content, \"text\"):\n            return str(getattr(content, \"text\", \"\"))\n        return str(content or \"\")\n\n    def _call_llm(self, prompt: str) -> str:\n        \"\"\"Panggil model LLM via Langflow connection atau google-genai langsung.\"\"\"\n        _bypass_ssl_verification()\n\n        if hasattr(self, \"llm\") and self.llm is not None:\n            try:\n                client = getattr(self.llm, \"client\", None)\n                if client:\n                    httpx_c = getattr(client, \"_httpx_client\", None)\n                    if httpx_c:\n                        transport = getattr(httpx_c, \"_transport\", None)\n                        if transport and hasattr(transport, \"_pool\"):\n                            pool = transport._pool\n                            if hasattr(pool, \"_ssl_context\") and pool._ssl_context:\n                                pool._ssl_context.check_hostname = False\n                                pool._ssl_context.verify_mode = ssl.CERT_NONE\n            except Exception:\n                pass\n\n            if hasattr(self.llm, \"invoke\"):\n                res = self.llm.invoke(prompt)\n                content = getattr(res, \"content\", res)\n                return self._extract_text_from_content(content)\n            elif callable(self.llm):\n                res = self.llm(prompt)\n                content = getattr(res, \"content\", res)\n                return self._extract_text_from_content(content)\n\n        # Fallback via SDK jika API key diisi\n        api_key = getattr(self, \"google_api_key\", None)\n        if api_key:\n            try:\n                from google import genai\n                from google.genai import types\n                client = genai.Client(\n                    api_key=api_key,\n                    http_options=types.HttpOptions(\n                        client_args={\"verify\": False},\n                        async_client_args={\"verify\": False}\n                    )\n                )\n                response = client.models.generate_content(\n                    model=\"gemini-2.0-flash\",\n                    contents=[prompt],\n                    config=types.GenerateContentConfig(temperature=0.0)\n                )\n                return getattr(response, \"text\", str(response))\n            except Exception as e:\n                raise RuntimeError(f\"Gagal memanggil Gemini via SDK fallback: {e}\")\n\n        raise ValueError(\"Node LLM belum disambungkan dan Google API Key tidak diisi pada komponen!\")\n\n    def _clean_json_response(self, text: Any) -> dict:\n        \"\"\"Membersihkan markdown code fence dari output LLM.\"\"\"\n        if isinstance(text, dict):\n            return text\n        if isinstance(text, list):\n            text = self._extract_text_from_content(text)\n        elif not isinstance(text, str):\n            text = str(text or \"\")\n\n        cleaned = text.strip()\n        if cleaned.startswith(\"```\"):\n            lines = cleaned.split(\"\\n\")\n            if lines[0].startswith(\"```\"):\n                lines = lines[1:]\n            if lines and lines[-1].strip() == \"```\":\n                lines = lines[:-1]\n            cleaned = \"\\n\".join(lines).strip()\n\n        try:\n            return json.loads(cleaned)\n        except json.JSONDecodeError:\n            start_idx = cleaned.find(\"{\")\n            end_idx = cleaned.rfind(\"}\")\n            if start_idx != -1 and end_idx != -1 and end_idx > start_idx:\n                return json.loads(cleaned[start_idx : end_idx + 1])\n            raise\n\n    def evaluate_compliance(self) -> Data:\n        input_data = self.retrieved_data.data if hasattr(self.retrieved_data, \"data\") else {}\n        paired_pillars = input_data.get(\"paired_pillars\", [])\n        doc_name = input_data.get(\"document_name\", \"privacy_policy\")\n\n        # Caching untuk mencegah evaluasi ulang jika dipanggil oleh beberapa output port\n        try:\n            cache_key = json.dumps(input_data, sort_keys=True)\n        except Exception:\n            cache_key = str(input_data)\n\n        if cache_key in _GLOBAL_COMPLIANCE_CACHE:\n            return _GLOBAL_COMPLIANCE_CACHE[cache_key]\n\n        if getattr(self, \"_cached_key\", None) == cache_key and getattr(self, \"_cached_result\", None) is not None:\n            return self._cached_result\n\n        instruction_lines = [\n            \"Anda adalah Auditor Kepatuhan Hukum Tertutup (Closed Legal Auditor) untuk UU No. 27 Tahun 2022 tentang Pelindungan Data Pribadi.\",\n            \"\",\n            \"ATURAN STRICT GROUNDING (ANTI-HALUSINASI):\",\n            \"1. Anda HANYA BOLEH menggunakan dasar hukum dari [KONTEKS PASAL RESMI] yang disediakan.\",\n            \"2. DILARANG KERAS mengutip pasal atau ayat yang tidak tertulis di dalam [KONTEKS PASAL RESMI].\",\n            \"3. Klasifikasikan status secara objektif:\",\n            \"   - COMPLIANT: Dokumen memenuhi seluruh syarat dan batas waktu yang diwajibkan pasal secara tegas.\",\n            \"   - PARTIAL: Dokumen menyebutkan topik tersebut namun ada syarat penting/batas waktu yang kurang atau ambigu.\",\n            \"   - NON_COMPLIANT: Dokumen secara langsung melanggar atau menafikan hak/kewajiban dalam pasal.\",\n            \"   - MISSING: Dokumen tidak memiliki klausul sama sekali terkait pilar ini.\",\n            \"4. Tingkat risiko (risk_level): LOW, MEDIUM, HIGH, atau CRITICAL.\",\n            \"5. Tulis rekomendasi klausul perbaikan yang siap disalin oleh tim legal organisasi.\",\n            \"\",\n            \"Kembalikan HANYA format JSON valid:\",\n            \"```json\",\n            \"{\",\n            '  \"pillar_id\": \"PILAR_...\",',\n            '  \"status\": \"COMPLIANT | PARTIAL | NON_COMPLIANT | MISSING\",',\n            '  \"risk_level\": \"LOW | MEDIUM | HIGH | CRITICAL\",',\n            '  \"analysis\": \"Penjelasan detail gap analysis...\",',\n            '  \"cited_articles\": [\"Pasal ...\"],',\n            '  \"suggested_revision\": \"Teks rekomendasi klausul...\"',\n            \"}\",\n            \"```\"\n        ]\n        system_instruction = \"\\n\".join(instruction_lines)\n\n        def _evaluate_single_pillar(item: Dict[str, Any]) -> Dict[str, Any]:\n            pid = str(item.get(\"pillar_id\", \"\"))\n            pname = str(item.get(\"pillar_name\", \"\"))\n            found = bool(item.get(\"found_in_doc\"))\n            raw_text = str(item.get(\"raw_clause_text\") or \"\")\n            legal_ctx = str(item.get(\"official_articles_text\") or \"\")\n\n            if found and raw_text:\n                clause_box = f\"```\\n{raw_text}\\n```\"\n            else:\n                clause_box = \"[KLAUSUL TIDAK DITEMUKAN / NIHIL]\"\n\n            legal_box = f\"```\\n{legal_ctx}\\n```\"\n\n            prompt_blocks = [\n                system_instruction,\n                \"\",\n                f\"PILAR AUDIT: {pid} - {pname}\",\n                \"\",\n                \"KLAUSUL DOKUMEN ORGANISASI:\",\n                clause_box,\n                \"\",\n                \"KONTEKS PASAL RESMI UU PDP (GROUND TRUTH):\",\n                legal_box,\n                \"\",\n                \"Kembalikan evaluasi dalam format JSON sesuai spesifikasi di atas.\"\n            ]\n            prompt = \"\\n\".join(prompt_blocks)\n\n            try:\n                raw_out = self._call_llm(prompt)\n                eval_dict = self._clean_json_response(raw_out)\n                if isinstance(eval_dict, list) and len(eval_dict) > 0 and isinstance(eval_dict[0], dict):\n                    eval_dict = eval_dict[0]\n                elif not isinstance(eval_dict, dict):\n                    eval_dict = {}\n            except Exception as e:\n                eval_dict = {\n                    \"status\": \"MISSING\",\n                    \"risk_level\": \"HIGH\",\n                    \"analysis\": f\"Evaluasi otomatis terkendala: {e}\",\n                    \"cited_articles\": [],\n                    \"suggested_revision\": \"\"\n                }\n\n            return {\n                \"pillar_id\": pid,\n                \"pillar_name\": pname,\n                \"found_in_doc\": found,\n                \"extracted_text\": raw_text if found else None,\n                \"status\": eval_dict.get(\"status\", \"MISSING\"),\n                \"risk_level\": eval_dict.get(\"risk_level\", \"HIGH\"),\n                \"analysis\": eval_dict.get(\"analysis\", \"\"),\n                \"cited_articles\": eval_dict.get(\"cited_articles\", []),\n                \"suggested_revision\": eval_dict.get(\"suggested_revision\", \"\")\n            }\n\n        # Evaluasi paralel 5 pilar untuk memangkas latensi dari ~95s ke ~18s\n        max_workers = min(5, len(paired_pillars)) if paired_pillars else 1\n        with ThreadPoolExecutor(max_workers=max_workers) as executor:\n            evaluations = list(executor.map(_evaluate_single_pillar, paired_pillars))\n\n        result_data = Data(data={\n            \"document_name\": doc_name,\n            \"evaluations\": evaluations\n        })\n        _GLOBAL_COMPLIANCE_CACHE[cache_key] = result_data\n        self._cached_key = cache_key\n        self._cached_result = result_data\n        return result_data\n\n    def get_status_message(self) -> Message:\n        res = self.evaluate_compliance()\n        data = res.data if hasattr(res, \"data\") else {}\n        evals = data.get(\"evaluations\", [])\n        lines = [\"### Status Evaluasi Kepatuhan Per-Pilar:\"]\n        for e in evals:\n            p_id = str(e.get(\"pillar_id\", \"\"))\n            p_name = str(e.get(\"pillar_name\", \"\"))\n            st = str(e.get(\"status\", \"\"))\n            rl = str(e.get(\"risk_level\", \"\"))\n            lines.append(f\"- **{p_id} ({p_name})**: Status `{st}` (Risiko: `{rl}`)\")\n        return Message(text=\"\\n\".join(lines))\n"
+              },
+              "google_api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": true,
+                "display_name": "Google API Key (Opsional)",
+                "dynamic": false,
+                "info": "Opsional: masukkan jika tidak menyambungkan node Language Model terpisah.",
+                "list": false,
+                "load_from_db": false,
+                "name": "google_api_key",
+                "password": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "llm": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Language Model",
+                "dynamic": false,
+                "info": "Model LLM (misalnya Google Generative AI / Gemini) dengan temperature 0.0.",
+                "input_types": [
+                  "LanguageModel"
+                ],
+                "list": false,
+                "name": "llm",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "other",
+                "value": ""
+              },
+              "retrieved_data": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Retrieved Legal Context Data",
+                "dynamic": false,
+                "info": "Data pasangan klausul dokumen dan pasal resmi UU PDP dari komponen Legal Retriever.",
+                "input_types": [
+                  "Data"
+                ],
+                "list": false,
+                "name": "retrieved_data",
+                "override_skip": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "other",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "compliance_results",
+          "showNode": true,
+          "type": "PDPComplianceCheckerComponent"
+        },
+        "dragging": false,
+        "id": "PDPComplianceChecker-node",
+        "measured": {
+          "height": 380,
+          "width": 320
+        },
+        "position": {
+          "x": 1080,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "description": "Menghitung skor kepatuhan matematis, mengklasifikasi risiko total, dan menghasilkan laporan matriks audit berformat Markdown dan JSON.",
+          "display_name": "📊 PDP Audit Reporter & Score Calculator",
+          "id": "PDPAuditReporter-node",
+          "node": {
+            "base_classes": [
+              "Message",
+              "Data"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Menghitung skor kepatuhan matematis, mengklasifikasi risiko total, dan menghasilkan laporan matriks audit berformat Markdown dan JSON.",
+            "display_name": "📊 PDP Audit Reporter & Score Calculator",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "compliance_data",
+              "document_name"
+            ],
+            "frozen": false,
+            "icon": "FileCheck2",
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Laporan Audit (Markdown Message)",
+                "group_outputs": false,
+                "loop_types": null,
+                "method": "generate_markdown_report",
+                "name": "report_markdown",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Laporan Audit (JSON Data)",
+                "group_outputs": false,
+                "loop_types": null,
+                "method": "generate_json_report",
+                "name": "report_json",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "\"\"\"\nPDPAuditReporterComponent – Langflow Custom Component untuk Kalkulator Skor & Pelaporan Audit.\nKompatibel dengan arsitektur LFX / Langflow Desktop v1.x (v1.9.2 - v1.11.0).\n\"\"\"\n\nfrom typing import Dict, Any, List\nfrom datetime import datetime\n\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.io import Output, HandleInput, MessageTextInput\nfrom lfx.schema.data import Data\nfrom lfx.schema.message import Message\n\n\nSTATUS_WEIGHT = {\n    \"COMPLIANT\": 100,\n    \"PARTIAL\": 50,\n    \"NON_COMPLIANT\": 0,\n    \"MISSING\": 0,\n}\n\nSTATUS_ICONS = {\n    \"COMPLIANT\": \"✅ COMPLIANT\",\n    \"PARTIAL\": \"⚠️ PARTIAL\",\n    \"NON_COMPLIANT\": \"❌ NON_COMPLIANT\",\n    \"MISSING\": \"⭕ MISSING\",\n}\n\nRISK_ICONS = {\n    \"LOW\": \"🟢 LOW\",\n    \"MEDIUM\": \"🟡 MEDIUM\",\n    \"HIGH\": \"🟠 HIGH\",\n    \"CRITICAL\": \"🔴 CRITICAL\",\n}\n\n\nclass PDPAuditReporterComponent(Component):\n    display_name: str = \"PDP Audit Reporter & Score Calculator\"\n    description: str = (\n        \"Menghitung skor kepatuhan matematis, mengklasifikasi risiko total, \"\n        \"dan menghasilkan laporan matriks audit berformat Markdown dan JSON.\"\n    )\n    icon: str = \"FileCheck2\"\n    name: str = \"PDPAuditReporter\"\n\n    inputs = [\n        HandleInput(\n            name=\"compliance_data\",\n            display_name=\"Compliance Results Data\",\n            input_types=[\"Data\"],\n            info=\"Data hasil evaluasi kepatuhan dari komponen Compliance Checker.\",\n            required=True,\n        ),\n        MessageTextInput(\n            name=\"document_name\",\n            display_name=\"Nama Dokumen (Opsional)\",\n            value=\"\",\n            info=\"Nama dokumen untuk pelaporan.\",\n        ),\n    ]\n\n    outputs = [\n        Output(name=\"report_markdown\", display_name=\"Laporan Audit (Markdown Message)\", method=\"generate_markdown_report\"),\n        Output(name=\"report_json\", display_name=\"Laporan Audit (JSON Data)\", method=\"generate_json_report\"),\n    ]\n\n    def _calculate_metrics(self) -> Dict[str, Any]:\n        input_data = self.compliance_data.data if hasattr(self.compliance_data, \"data\") else {}\n        evaluations = input_data.get(\"evaluations\", [])\n        doc_name = self.document_name or input_data.get(\"document_name\", \"Dokumen Kebijakan Privasi\")\n\n        total_weight = 0\n        pilar4_status = None\n\n        for e in evaluations:\n            status = e.get(\"status\", \"MISSING\")\n            weight = STATUS_WEIGHT.get(status, 0)\n            total_weight += weight\n            if e.get(\"pillar_id\") == \"PILAR_4\":\n                pilar4_status = status\n\n        total_pillars = max(len(evaluations), 5)\n        score = round((total_weight / (total_pillars * 100)) * 100, 2)\n\n        # Klasifikasi risiko total\n        if pilar4_status in (\"NON_COMPLIANT\", \"MISSING\"):\n            overall_risk = \"CRITICAL_RISK (Notifikasi Kebocoran Nihil/Melanggar UU)\"\n            risk_badge = \"🔴 CRITICAL RISK\"\n        elif score < 60:\n            overall_risk = \"HIGH_RISK\"\n            risk_badge = \"🟠 HIGH RISK\"\n        elif score < 85:\n            overall_risk = \"MEDIUM_RISK\"\n            risk_badge = \"🟡 MEDIUM RISK\"\n        else:\n            overall_risk = \"LOW_RISK\"\n            risk_badge = \"🟢 LOW RISK\"\n\n        return {\n            \"document_name\": doc_name,\n            \"compliance_score\": score,\n            \"overall_risk\": overall_risk,\n            \"risk_badge\": risk_badge,\n            \"evaluations\": evaluations,\n            \"timestamp\": datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\")\n        }\n\n    def generate_markdown_report(self) -> Message:\n        metrics = self._calculate_metrics()\n        evals = metrics.get(\"evaluations\", [])\n\n        doc_name = str(metrics.get(\"document_name\", \"\"))\n        score = str(metrics.get(\"compliance_score\", 0))\n        risk_badge = str(metrics.get(\"risk_badge\", \"\"))\n        timestamp = str(metrics.get(\"timestamp\", \"\"))\n        overall_risk = str(metrics.get(\"overall_risk\", \"\"))\n\n        lines = [\n            \"# 📋 LAPORAN AUDIT KEPATUHAN KEBIJAKAN PRIVASI\",\n            \"**Berdasarkan UU No. 27 Tahun 2022 (UU PDP) · Closed-RAG Deterministic Engine**\",\n            \"\",\n            f\"- **Nama Dokumen**: `{doc_name}`\",\n            f\"- **Skor Kepatuhan**: **`{score}%`**\",\n            f\"- **Klasifikasi Risiko**: **{risk_badge}**\",\n            f\"- **Waktu Audit**: `{timestamp}`\",\n            \"\",\n            \"---\",\n            \"### 📊 MATRIKS KEPATUHAN 5 PILAR WAJIB\",\n            \"\",\n            \"| ID Pilar | Nama Pilar | Status Kepatuhan | Tingkat Risiko | Dasar Hukum |\",\n            \"| :--- | :--- | :--- | :--- | :--- |\"\n        ]\n\n        for e in evals:\n            pid = str(e.get(\"pillar_id\", \"\"))\n            pname = str(e.get(\"pillar_name\", \"\"))\n            st_raw = e.get(\"status\")\n            status_text = str(STATUS_ICONS.get(st_raw, st_raw))\n            rl_raw = e.get(\"risk_level\")\n            risk_text = str(RISK_ICONS.get(rl_raw, rl_raw))\n            cited_articles = e.get(\"cited_articles\") or []\n            cited = \", \".join(cited_articles) if cited_articles else \"-\"\n            lines.append(f\"| **{pid}** | {pname} | {status_text} | {risk_text} | {cited} |\")\n\n        lines.extend([\n            \"\",\n            \"---\",\n            \"### 🔍 TEMUAN AUDIT & REKOMENDASI KLAUSUL PERBAIKAN\",\n            \"\"\n        ])\n\n        for e in evals:\n            pid = str(e.get(\"pillar_id\", \"\"))\n            pname = str(e.get(\"pillar_name\", \"\"))\n            st_raw = e.get(\"status\")\n            status_badge = str(STATUS_ICONS.get(st_raw, st_raw))\n            rl_raw = e.get(\"risk_level\")\n            risk_badge = str(RISK_ICONS.get(rl_raw, rl_raw))\n            gap_analysis = str(e.get(\"analysis\", \"\"))\n\n            lines.append(f\"#### [{pid}] {pname}\")\n            lines.append(f\"- **Status**: {status_badge} | **Risiko**: {risk_badge}\")\n            lines.append(f\"- **Analisis Gap**: {gap_analysis}\")\n\n            cited_articles = e.get(\"cited_articles\") or []\n            if cited_articles:\n                cited_str = \", \".join(cited_articles)\n                lines.append(f\"- **Pasal Rujukan**: {cited_str}\")\n\n            rev = str(e.get(\"suggested_revision\") or \"\").strip()\n            if rev:\n                lines.append(\"- **Rekomendasi Revisi Klausul (Ready to Copy)**:\")\n                lines.append(f\"  > *{rev}*\")\n            lines.append(\"\")\n\n        exec_summary = (\n            f\"Dokumen `{doc_name}` memperoleh skor kepatuhan **{score}%** ({overall_risk}). \"\n            \"Penyelarasan klausul wajib dilakukan terutama pada pilar yang berstatus `PARTIAL` atau `NON_COMPLIANT` \"\n            \"guna menghindari sanksi administratif Pasal 57 UU No. 27/2022.\"\n        )\n\n        lines.extend([\n            \"---\",\n            \"### 📌 RINGKASAN EKSEKUTIF\",\n            exec_summary\n        ])\n\n        return Message(text=\"\\n\".join(lines))\n\n    def generate_json_report(self) -> Data:\n        metrics = self._calculate_metrics()\n        return Data(data=metrics)\n"
+              },
+              "compliance_data": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Compliance Results Data",
+                "dynamic": false,
+                "info": "Data hasil evaluasi kepatuhan dari komponen Compliance Checker.",
+                "input_types": [
+                  "Data"
+                ],
+                "list": false,
+                "name": "compliance_data",
+                "override_skip": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "other",
+                "value": ""
+              },
+              "document_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Nama Dokumen (Opsional)",
+                "dynamic": false,
+                "info": "Nama dokumen untuk pelaporan.",
+                "list": false,
+                "name": "document_name",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "report_markdown",
+          "showNode": true,
+          "type": "PDPAuditReporterComponent"
+        },
+        "dragging": false,
+        "id": "PDPAuditReporter-node",
+        "measured": {
+          "height": 320,
+          "width": 320
+        },
+        "position": {
+          "x": 1580,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "ChatOutput-report",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Display a chat message in the Playground.",
+            "display_name": "Chat Output",
+            "documentation": "https://docs.langflow.org/chat-input-and-output",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "should_store_message",
+              "sender",
+              "sender_name",
+              "session_id",
+              "context_id",
+              "data_template",
+              "clean_data"
+            ],
+            "frozen": false,
+            "icon": "MessagesSquare",
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "metadata": {
+              "code_hash": "84009527d08c",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "orjson",
+                    "version": "3.11.9"
+                  },
+                  {
+                    "name": "fastapi",
+                    "version": "0.139.0"
+                  },
+                  {
+                    "name": "lfx",
+                    "version": null
+                  }
+                ],
+                "total_dependencies": 3
+              },
+              "module": "lfx.components.input_output.chat_output.ChatOutput"
+            },
+            "minimized": true,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Output Message",
+                "group_outputs": false,
+                "method": "message_response",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "clean_data": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Basic Clean Data",
+                "dynamic": false,
+                "info": "Whether to clean data before converting to string.",
+                "list": false,
+                "name": "clean_data",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "bool",
+                "value": true
+              },
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from collections.abc import Generator\nfrom typing import Any\n\nimport orjson\nfrom fastapi.encoders import jsonable_encoder\n\nfrom lfx.base.io.chat import ChatComponent\nfrom lfx.helpers.data import safe_convert\nfrom lfx.inputs.inputs import BoolInput, DropdownInput, HandleInput, MessageTextInput\nfrom lfx.schema.data import Data\nfrom lfx.schema.dataframe import DataFrame\nfrom lfx.schema.message import Message\nfrom lfx.schema.properties import Source\nfrom lfx.template.field.base import Output\nfrom lfx.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_AI,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatOutput(ChatComponent):\n    display_name = \"Chat Output\"\n    description = \"Display a chat message in the Playground.\"\n    documentation: str = \"https://docs.langflow.org/chat-input-and-output\"\n    icon = \"MessagesSquare\"\n    name = \"ChatOutput\"\n    minimized = True\n\n    inputs = [\n        HandleInput(\n            name=\"input_value\",\n            display_name=\"Inputs\",\n            info=\"Message to be passed as output.\",\n            input_types=[\"Data\", \"JSON\", \"DataFrame\", \"Table\", \"Message\"],\n            required=True,\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_AI,\n            advanced=True,\n            info=\"Type of sender.\",\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_AI,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"context_id\",\n            display_name=\"Context ID\",\n            info=\"The context ID of the chat. Adds an extra layer to the local memory.\",\n            value=\"\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"data_template\",\n            display_name=\"Data Template\",\n            value=\"{text}\",\n            advanced=True,\n            info=\"Template to convert Data to Text. If left empty, it will be dynamically set to the Data's text key.\",\n        ),\n        BoolInput(\n            name=\"clean_data\",\n            display_name=\"Basic Clean Data\",\n            value=True,\n            advanced=True,\n            info=\"Whether to clean data before converting to string.\",\n        ),\n    ]\n    outputs = [\n        Output(\n            display_name=\"Output Message\",\n            name=\"message\",\n            method=\"message_response\",\n        ),\n    ]\n\n    def _build_source(self, id_: str | None, display_name: str | None, source: str | None) -> Source:\n        source_dict = {}\n        if id_:\n            source_dict[\"id\"] = id_\n        if display_name:\n            source_dict[\"display_name\"] = display_name\n        if source:\n            if hasattr(source, \"model_name\"):\n                source_dict[\"source\"] = source.model_name\n            elif hasattr(source, \"model\"):\n                source_dict[\"source\"] = str(source.model)\n            else:\n                source_dict[\"source\"] = str(source)\n        return Source(**source_dict)\n\n    async def message_response(self) -> Message:\n        text = self.convert_to_string()\n        source, _, display_name, source_id = self.get_properties_from_source_component()\n\n        if isinstance(self.input_value, Message) and not self.is_connected_to_chat_input():\n            message = self.input_value\n            message.text = text\n            existing_session_id = message.session_id\n        else:\n            message = Message(text=text)\n            existing_session_id = None\n\n        message.sender = self.sender\n        message.sender_name = self.sender_name\n        message.session_id = (\n            self.session_id or existing_session_id or (self.graph.session_id if hasattr(self, \"graph\") else None) or \"\"\n        )\n        message.context_id = self.context_id\n        message.flow_id = self.graph.flow_id if hasattr(self, \"graph\") else None\n        message.properties.source = self._build_source(source_id, display_name, source)\n\n        if message.session_id and self.should_store_message:\n            stored_message = await self.send_message(message)\n            self.message.value = stored_message\n            message = stored_message\n\n        if hasattr(self, \"_vertex\") and self._vertex is not None:\n            accumulated_usage = self._vertex._accumulate_upstream_token_usage()\n            if accumulated_usage:\n                message.properties.usage = accumulated_usage\n                if self.should_store_message and message.get_id():\n                    message = await self._update_stored_message(message)\n                    await self._send_message_event(message, id_=message.get_id())\n\n        self.status = message\n        return message\n\n    def _serialize_data(self, data: Data) -> str:\n        serializable_data = jsonable_encoder(data.data)\n        json_bytes = orjson.dumps(serializable_data, option=orjson.OPT_INDENT_2)\n        return \"```json\\n\" + json_bytes.decode(\"utf-8\") + \"\\n```\"\n\n    def _validate_input(self) -> None:\n        if self.input_value is None:\n            msg = \"Input data cannot be None\"\n            raise ValueError(msg)\n        if isinstance(self.input_value, list) and not all(\n            isinstance(item, Message | Data | DataFrame | str) for item in self.input_value\n        ):\n            invalid_types = [\n                type(item).__name__\n                for item in self.input_value\n                if not isinstance(item, Message | Data | DataFrame | str)\n            ]\n            msg = f\"Expected Data or DataFrame or Message or str, got {invalid_types}\"\n            raise TypeError(msg)\n        if not isinstance(\n            self.input_value,\n            Message | Data | DataFrame | str | list | Generator | type(None),\n        ):\n            type_name = type(self.input_value).__name__\n            msg = f\"Expected Data or DataFrame or Message or str, Generator or None, got {type_name}\"\n            raise TypeError(msg)\n\n    def convert_to_string(self) -> str | Generator[Any, None, None]:\n        self._validate_input()\n        if isinstance(self.input_value, list):\n            clean_data: bool = getattr(self, \"clean_data\", False)\n            return \"\\n\".join([safe_convert(item, clean_data=clean_data) for item in self.input_value])\n        if isinstance(self.input_value, Generator):\n            return self.input_value\n        return safe_convert(self.input_value)\n"
+              },
+              "context_id": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Context ID",
+                "dynamic": false,
+                "info": "The context ID of the chat. Adds an extra layer to the local memory.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "name": "context_id",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "data_template": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Data Template",
+                "dynamic": false,
+                "info": "Template to convert Data to Text. If left empty, it will be dynamically set to the Data's text key.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "name": "data_template",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "{text}"
+              },
+              "input_value": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Inputs",
+                "dynamic": false,
+                "info": "Message to be passed as output.",
+                "input_types": [
+                  "Data",
+                  "JSON",
+                  "DataFrame",
+                  "Table",
+                  "Message"
+                ],
+                "list": false,
+                "name": "input_value",
+                "override_skip": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "other",
+                "value": ""
+              },
+              "sender": {
+                "_input_type": "DropdownInput",
+                "advanced": true,
+                "api_editable": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Sender Type",
+                "dynamic": false,
+                "external_options": {},
+                "info": "Type of sender.",
+                "name": "sender",
+                "options": [
+                  "Machine",
+                  "User"
+                ],
+                "options_metadata": [],
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "str",
+                "value": "Machine"
+              },
+              "sender_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Sender Name",
+                "dynamic": false,
+                "info": "Name of the sender.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "name": "sender_name",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "AI"
+              },
+              "session_id": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Session ID",
+                "dynamic": false,
+                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "name": "session_id",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "should_store_message": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Store Messages",
+                "dynamic": false,
+                "info": "Store the message in the history.",
+                "list": false,
+                "name": "should_store_message",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "bool",
+                "value": true
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "message",
+          "showNode": false,
+          "type": "ChatOutput"
+        },
+        "dragging": false,
+        "id": "ChatOutput-report",
+        "measured": {
+          "height": 52,
+          "width": 192
+        },
+        "position": {
+          "x": 2080,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode"
+      }
+    ],
+    "viewport": {
+      "x": 200.0,
+      "y": 150.0,
+      "zoom": 0.65
+    }
+  },
+  "description": "Mesin Audit Kepatuhan Kebijakan Privasi terhadap UU No. 27/2022 (UU PDP resmi LNRI 196) Berbasis Closed-RAG Deterministik.",
+  "endpoint_name": null,
+  "id": "a98e2140-5b18-4d56-8e12-pdp272022flow",
+  "is_component": false,
+  "last_tested_version": "1.9.2",
+  "locked": false,
+  "name": "Audit PDP Compliance Engine (Closed-RAG)",
+  "tags": [
+    "closed-rag",
+    "uu-pdp",
+    "compliance",
+    "audit",
+    "gemini"
+  ]
+}
